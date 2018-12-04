@@ -17,4 +17,6 @@ public abstract class Zone {
 	{
 		cartes.add(carte);
 	}
+	
+	public abstract int compterPoint();
 }
