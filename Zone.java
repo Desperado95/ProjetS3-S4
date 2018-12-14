@@ -5,7 +5,7 @@ public abstract class Zone {
 	protected ArrayList<Carte> cartes;
 	protected boolean termine;
 	protected int point;
-	protected String type;
+	protected Parcelle type;
 
 	
 	
