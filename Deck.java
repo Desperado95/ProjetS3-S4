@@ -1,3 +1,6 @@
+import java.util.ArrayList;
+import java.util.Collections;
+
 public class Deck {
     String nbCartes;
     ArrayList<Carte> carte;
@@ -7,18 +10,18 @@ public class Deck {
         nbCartes = null;
     }
 
-    public Deck(Carte carte) {
+    public Deck(ArrayList<Carte> carte) {
         this.carte = carte;
-        nbCartes = carte.size();
+        nbCartes = String.valueOf(carte.size());
     }
-    
-    
+
+
     public void melanger(){
-        
+        Collections.shuffle(carte);
     }
-    
-    public int getNbCarte(){
-        
+
+    public String getNbCarte(){
+        return nbCartes;
     }
 
 
