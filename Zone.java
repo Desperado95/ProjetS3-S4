@@ -2,9 +2,10 @@ import java.util.ArrayList;
 
 public abstract class Zone {
 	
-	private ArrayList<Carte> cartes;
-	private boolean termine;
-	private int point;
+	protected ArrayList<Carte> cartes;
+	protected boolean termine;
+	protected int point;
+	protected String type;
 
 	
 	
