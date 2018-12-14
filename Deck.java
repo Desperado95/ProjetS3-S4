@@ -2,17 +2,17 @@ import java.util.ArrayList;
 import java.util.Collections;
 
 public class Deck {
-    String nbCartes;
+    int nbCartes;
     ArrayList<Carte> carte;
 
     public Deck() {
         this.carte = new ArrayList<Carte>();
-        nbCartes = null;
+        nbCartes = 0;
     }
 
     public Deck(ArrayList<Carte> carte) {
         this.carte = carte;
-        nbCartes = String.valueOf(carte.size());
+        nbCartes = carte.size();
     }
 
 
