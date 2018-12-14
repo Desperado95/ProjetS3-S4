@@ -11,4 +11,11 @@ public class ZoneAbbaye extends Zone {
 		this.point=this.compterPoint();
 	}
 	
+	
+	    public int compterPoint() {
+
+
+	    return 0;
+    }
+	
 }
