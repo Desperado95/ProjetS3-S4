@@ -20,7 +20,7 @@ public class Deck {
         Collections.shuffle(carte);
     }
 
-    public String getNbCarte(){
+    public int getNbCarte(){
         return nbCartes;
     }
 
