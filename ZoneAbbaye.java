@@ -6,7 +6,7 @@ public class ZoneAbbaye extends Zone {
 	public ZoneAbbaye()
 	{
 		this.cartes=new ArrayList<Carte>();
-		this.type=type;
+		this.type=Parcelle.abbaye;
 		this.termine=false;
 		this.point=this.compterPoint();
 	}
