@@ -11,6 +11,6 @@ public class ZoneVille extends Zone {
 
     @Override
     public int compterPoint() {
-        return 0;
+       return 0;
     }
 }

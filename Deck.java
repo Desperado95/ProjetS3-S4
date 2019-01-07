@@ -2,7 +2,7 @@ import java.util.ArrayList;
 import java.util.Collections;
 
 public class Deck {
-    int nbCartes;
+    private int nbCartes;
     ArrayList<Carte> carte;
 
     public Deck() {
@@ -16,13 +16,12 @@ public class Deck {
     }
 
 
-    public void melanger(){
+    public void melanger() {
         Collections.shuffle(carte);
     }
 
-    public int getNbCarte(){
+    public int getNbCarte() {
         return nbCartes;
     }
-
 
 }

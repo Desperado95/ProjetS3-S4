@@ -3,24 +3,21 @@ public class Joueur {
     protected int point;
     protected Couleur couleur;
     protected Partisan[] partisans;
+    protected Carte carte;
 
     public Joueur(String nom, int point, Couleur couleur) {
         this.nom = nom;
         this.point = point;
         this.couleur = couleur;
         partisans = new Partisan[5];
+        this.carte = new Carte();
     }
 
 
-
-    /*
-     * Les méthodes
-     *
-     *
-     *
-     *
-     *
-     * */
+    public void piocher(Deck deck) {
+        carte = new Carte(deck.carte.get(0));
+        deck.carte.remove(0);
+    }
 
 
 }
