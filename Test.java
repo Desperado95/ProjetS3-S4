@@ -1,16 +1,15 @@
+public class Test {
 
-public class Main {
 
-
-	public static void main(String[] args) {	
+	public static void main(String[] args) {
 		Parcelle plaine = Parcelle.plaine;
 		Parcelle chemin = Parcelle.chemin;
 		Parcelle abbaye = Parcelle.abbaye;
 		Parcelle ville = Parcelle.ville;
-		
+
 		Deck deck = new Deck();
-		
-						//Carte(centre, nord, sud, est, ouest)
+
+		//Carte(centre, nord, sud, est, ouest)
 		Carte c1 = new Carte(Parcelle.chemin, Parcelle.plaine, Parcelle.chemin, Parcelle.plaine, Parcelle.chemin);int i=9;
 		for(int y=0;y<i;y++)
 		{
@@ -131,7 +130,7 @@ public class Main {
 		{
 			deck.AddCarte(c24);
 		}
-		
+
 		deck.Aff();
 		deck.melanger();
 		deck.Aff();

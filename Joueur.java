@@ -15,8 +15,8 @@ public class Joueur {
 
 
     public void piocher(Deck deck) {
-        carte = new Carte(deck.carte.get(0));
-        deck.carte.remove(0);
+        carte = new Carte(deck.lsCarte.get(0));
+        deck.lsCarte.remove(0);
     }
 
 
