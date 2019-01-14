@@ -39,12 +39,16 @@ public class Carte {
         eCentre = null;
     }
 
-    public Carte(Parcelle centre, Parcelle nord, Parcelle sud, Parcelle est, Parcelle ouest) {
+    public Carte(Parcelle centre, Parcelle nord, Parcelle sud, Parcelle est, Parcelle ouest, Parcelle nordoust, Parcelle nordest, Parcelle sudouest, Parcelle sudost) {
         this.centre = centre;
         this.nord = nord;
         this.sud = sud;
         this.est = est;
         this.ouest = ouest;
+        this.sudouest = sudouest;
+        this.sudest = sudest;
+        this.nordest = nordest;
+        this.nordouest = nordouest;
         this.etat = (Etat.non_place);
 
         eNord = Etat.non_place;
@@ -56,7 +60,6 @@ public class Carte {
         eSudouest = Etat.non_place;
         eSudest = Etat.non_place;
         eCentre = Etat.non_place;
-        autocomplir();
 
     }
 
@@ -102,24 +105,8 @@ public class Carte {
         System.out.println("	" + sud + "\n");
     }
 
-    public void autocomplir() {
-        if (centre == Parcelle.chemin) {
-            if (sud == Parcelle.chemin) {
-                if (nord == Parcelle.chemin) {
-                    sudouest = sudest = nordest = nordouest = Parcelle.plaine;
-                } else {
-                    if (ouest == Parcelle.chemin)
-                        sudouest = Parcelle.plaine;
-                    if (est == Parcelle.chemin)
-                        sudest = Parcelle.plaine;
-                }
-            }
 
-
-        }
-
-
-    }
+}
 
 
 }
