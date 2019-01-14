@@ -1,4 +1,4 @@
 
 public enum Etat {
-place,non_place;
+    place, non_place, disable;
 }
