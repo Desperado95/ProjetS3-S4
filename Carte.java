@@ -5,22 +5,7 @@ public class Carte {
     Parcelle sud;
     Parcelle est;
     Parcelle ouest;
-    Parcelle nordouest;
-    Parcelle nordest;
-    Parcelle sudouest;
-    Parcelle sudest;
     Etat etat;
-    Etat eCentre;
-    Etat eNord;
-    Etat eSud;
-    Etat eEst;
-    Etat eOuest;
-    Etat eNordouest;
-    Etat eNordest;
-    Etat eSudest;
-    Etat eSudouest;
-
-
 
     public Carte() {
         this.est = null;
@@ -70,11 +55,4 @@ public class Carte {
         System.out.println(ouest + "	" + centre + "	" + est);
         System.out.println("	" + sud + "\n");
     }
-
-    public void autocomplir() {
-        if ()
-    }
-
-
-
 }
