@@ -6,7 +6,8 @@ public class Carte {
     Parcelle est;
     Parcelle ouest;
     Etat etat;
-
+    InputStream image;
+    
     public Carte() {
         this.est = null;
         nord = null;
@@ -14,15 +15,17 @@ public class Carte {
         ouest = null;
         centre = null;
         this.etat = null;
+        this.image = null;
     }
 
-    public Carte(Parcelle centre, Parcelle nord, Parcelle sud, Parcelle est, Parcelle ouest) {
+    public Carte(Parcelle centre, Parcelle nord, Parcelle sud, Parcelle est, Parcelle ouest, InputStream i) {
         this.centre = centre;
         this.nord = nord;
         this.sud = sud;
         this.est = est;
         this.ouest = ouest;
         this.etat = (Etat.non_place);
+        this.image = i;
     }
 
     public Carte(Carte c) {
@@ -32,6 +35,7 @@ public class Carte {
         this.est = c.est;
         this.ouest = c.ouest;
         this.etat = (Etat.non_place);
+        this.image = c.image;
     }
 
     public void tournerHoraire() {
