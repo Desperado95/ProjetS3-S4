@@ -79,31 +79,38 @@ public class Joueur {
                 }
             }
         }
+    }
 
-        /* Parcourir tousles états,est ce qu'il exist un état == placé*/
-
-        public void parcourirPlace () {
-            if (carte.eNord == Etat.place)
-                carte.eNord = Etat.non_place;
-            if (carte.eSud == Etat.place)
-                carte.eSud = Etat.non_place;
-            if (carte.eOuest == Etat.place)
-                carte.eOuest = Etat.non_place;
-            if (carte.eEst == Etat.place)
-                carte.eEst = Etat.non_place;
-            if (carte.eNordouest == Etat.place)
-                carte.eNordouest = Etat.non_place;
-            if (carte.eNordest == Etat.place)
-                carte.eNordest = Etat.non_place;
-            if (carte.eSudouest == Etat.place)
-                carte.eSudouest = Etat.non_place;
-            if (carte.eSudest == Etat.place)
-                carte.eSudest = Etat.non_place;
-            if (carte.eCentre == Etat.place)
-                carte.eCentre = Etat.non_place;
-        }
+    /*
 
 
+  1  2  3
+  4  5  6
+  7  8  9
+
+     */
+
+    /* Parcourir tousles états,est ce qu'il exist un état == placé*/
+
+    public void parcourirPlace() {
+        if (carte.eNord == Etat.place)
+            carte.eNord = Etat.non_place;
+        if (carte.eSud == Etat.place)
+            carte.eSud = Etat.non_place;
+        if (carte.eOuest == Etat.place)
+            carte.eOuest = Etat.non_place;
+        if (carte.eEst == Etat.place)
+            carte.eEst = Etat.non_place;
+        if (carte.eNordouest == Etat.place)
+            carte.eNordouest = Etat.non_place;
+        if (carte.eNordest == Etat.place)
+            carte.eNordest = Etat.non_place;
+        if (carte.eSudouest == Etat.place)
+            carte.eSudouest = Etat.non_place;
+        if (carte.eSudest == Etat.place)
+            carte.eSudest = Etat.non_place;
+        if (carte.eCentre == Etat.place)
+            carte.eCentre = Etat.non_place;
     }
 
 
