@@ -15,117 +15,117 @@ public class Test {
         for (int y = 0; y < i; y++) {
             deck.AddCarte(c1);
         }
-        Carte c2 = new Carte(Parcelle.chemin, Parcelle.ville, Parcelle.chemin, Parcelle.chemin, Parcelle.plaine, Parcelle.plaine, Parcelle.plaine, Parcelle.plaine, Parcelle.plaine);
+        Carte c2 = new Carte(Parcelle.chemin, Parcelle.ville, Parcelle.chemin, Parcelle.chemin, Parcelle.plaine, Parcelle.ville, Parcelle.ville, Parcelle.plaine, Parcelle.plaine);
         i = 3;
         for (int y = 0; y < i; y++) {
             deck.AddCarte(c2);
         }
-        Carte c3 = new Carte(ville, ville, chemin, chemin, ville, Parcelle.plaine, Parcelle.plaine, Parcelle.plaine, Parcelle.plaine);
+        Carte c3 = new Carte(ville, ville, chemin, chemin, ville, ville, ville, ville, chemin);
         i = 2;
         for (int y = 0; y < i; y++) {
             deck.AddCarte(c3);
         }
-        Carte c4 = new Carte(ville, ville, chemin, ville, ville);
+        Carte c4 = new Carte(ville, ville, chemin, ville, ville, ville, ville, ville, ville);
         i = 1;
         for (int y = 0; y < i; y++) {
             deck.AddCarte(c4);
         }
-        Carte c5 = new Carte(ville, ville, plaine, ville, ville);
+        Carte c5 = new Carte(ville, ville, plaine, ville, ville, ville, ville, ville, ville);
         i = 1;
         for (int y = 0; y < i; y++) {
             deck.AddCarte(c5);
         }
-        Carte c6 = new Carte(ville, ville, chemin, chemin, ville);
+        Carte c6 = new Carte(ville, ville, chemin, chemin, ville, ville, ville, ville, plaine);
         i = 3;
         for (int y = 0; y < i; y++) {
             deck.AddCarte(c6);
         }
-        Carte c7 = new Carte(chemin, ville, chemin, chemin, chemin);
+        Carte c7 = new Carte(chemin, ville, chemin, chemin, chemin, ville, ville, plaine, plaine);
         i = 3;
         for (int y = 0; y < i; y++) {
             deck.AddCarte(c7);
         }
-        Carte c8 = new Carte(chemin, chemin, chemin, plaine, plaine);
+        Carte c8 = new Carte(chemin, chemin, chemin, plaine, plaine, plaine, plaine, plaine, plaine);
         i = 8;
         for (int y = 0; y < i; y++) {
             deck.AddCarte(c8);
         }
-        Carte c9 = new Carte(ville, plaine, chemin, chemin, chemin);
+        Carte c9 = new Carte(ville, plaine, chemin, chemin, chemin, plaine, plaine, plaine, plaine);
         i = 4;
         for (int y = 0; y < i; y++) {
             deck.AddCarte(c9);
         }
-        Carte c10 = new Carte(plaine, ville, plaine, plaine, plaine);
+        Carte c10 = new Carte(plaine, ville, plaine, plaine, plaine, plaine, plaine, plaine, plaine);
         i = 5;
         for (int y = 0; y < i; y++) {
             deck.AddCarte(c10);
         }
-        Carte c11 = new Carte(plaine, ville, plaine, plaine, ville);
+        Carte c11 = new Carte(plaine, ville, plaine, plaine, ville, plaine, ville, plaine, plaine);
         i = 2;
         for (int y = 0; y < i; y++) {
             deck.AddCarte(c11);
         }
-        Carte c12 = new Carte(ville, ville, plaine, ville, ville);
+        Carte c12 = new Carte(ville, ville, plaine, ville, ville, ville, ville, ville, ville);
         i = 3;
         for (int y = 0; y < i; y++) {
             deck.AddCarte(c12);
         }
-        Carte c13 = new Carte(abbaye, plaine, plaine, plaine, plaine);
+        Carte c13 = new Carte(abbaye, plaine, plaine, plaine, plaine, plaine, plaine, plaine, plaine);
         i = 4;
         for (int y = 0; y < i; y++) {
             deck.AddCarte(c13);
         }
-        Carte c14 = new Carte(ville, plaine, chemin, plaine, plaine);
+        Carte c14 = new Carte(ville, plaine, chemin, plaine, plaine, plaine, plaine, plaine, plaine);
         i = 2;
         for (int y = 0; y < i; y++) {
             deck.AddCarte(c14);
         }
-        Carte c15 = new Carte(ville, ville, plaine, plaine, ville);
+        Carte c15 = new Carte(ville, ville, plaine, plaine, ville, ville, plaine, plaine, plaine);
         i = 3;
         for (int y = 0; y < i; y++) {
             deck.AddCarte(c15);
         }
-        Carte c16 = new Carte(ville, plaine, plaine, ville, ville);
+        Carte c16 = new Carte(ville, plaine, plaine, ville, ville, ville, ville, ville, ville);
         i = 2;
         for (int y = 0; y < i; y++) {
             deck.AddCarte(c16);
         }
-        Carte c17 = new Carte(chemin, ville, plaine, chemin, chemin);
+        Carte c17 = new Carte(chemin, ville, plaine, chemin, chemin, plaine, plaine, plaine, plaine);
         i = 4;
         for (int y = 0; y < i; y++) {
             deck.AddCarte(c17);
         }
-        Carte c18 = new Carte(chemin, ville, chemin, plaine, chemin);
+        Carte c18 = new Carte(chemin, ville, chemin, plaine, chemin, plaine, plaine, plaine, plaine);
         i = 3;
         for (int y = 0; y < i; y++) {
             deck.AddCarte(c18);
         }
-        Carte c19 = new Carte(ville, plaine, plaine, ville, ville);
+        Carte c19 = new Carte(ville, plaine, plaine, ville, ville, ville, ville, ville, ville);
         i = 1;
         for (int y = 0; y < i; y++) {
             deck.AddCarte(c19);
         }
-        Carte c20 = new Carte(ville, ville, chemin, chemin, chemin);
+        Carte c20 = new Carte(ville, ville, chemin, chemin, chemin, ville, ville, ville, ville);
         i = 2;
         for (int y = 0; y < i; y++) {
             deck.AddCarte(c20);
         }
-        Carte c21 = new Carte(ville, ville, ville, ville, ville);
+        Carte c21 = new Carte(ville, ville, ville, ville, ville, ville, ville, ville, ville);
         i = 1;
         for (int y = 0; y < i; y++) {
             deck.AddCarte(c21);
         }
-        Carte c22 = new Carte(ville, chemin, chemin, chemin, chemin);
+        Carte c22 = new Carte(ville, chemin, chemin, chemin, chemin, plaine, plaine, plaine, plaine);
         i = 1;
         for (int y = 0; y < i; y++) {
             deck.AddCarte(c22);
         }
-        Carte c23 = new Carte(ville, ville, plaine, plaine, ville);
+        Carte c23 = new Carte(ville, ville, plaine, plaine, ville, ville, plaine, plaine, plaine);
         i = 2;
         for (int y = 0; y < i; y++) {
             deck.AddCarte(c23);
         }
-        Carte c24 = new Carte(plaine, plaine, plaine, ville, ville);
+        Carte c24 = new Carte(plaine, plaine, plaine, ville, ville, plaine, plaine, plaine, plaine);
         i = 3;
         for (int y = 0; y < i; y++) {
             deck.AddCarte(c24);
