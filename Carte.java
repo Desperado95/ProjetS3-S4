@@ -104,7 +104,7 @@ public class Carte {
         System.out.println(ouest + "	" + centre + "	" + est);
         System.out.println("	" + sud + "\n");
     }
-
+ 
 }
 
 
