@@ -26,8 +26,8 @@ public class Joueur {
 
     /*Le methode de mettre un partisant sur la carte ce qui est dans le main*/
     public void mettreLesPions(int i) {
-        public void mettreLesPions () {
-            if (!partisans.isEmpty()) {
+
+        if (!partisans.isEmpty()) {
                 switch (i) {
                     case 1:
                         if (carte.eNordouest != Etat.disable) {
@@ -79,7 +79,7 @@ public class Joueur {
                 }
             }
         }
-    }
+
 
     /*
 
