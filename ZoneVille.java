@@ -6,6 +6,7 @@ public class ZoneVille extends Zone {
         this.type = Parcelle.ville;
         this.termine = false;
         this.point = this.compterPoint();
+        this.partisans=new ArrayList<Partisan>();
     }
 
 

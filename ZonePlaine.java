@@ -7,6 +7,7 @@ public class ZonePlaine extends Zone {
         this.type = Parcelle.plaine;
         this.termine = false;
         this.point = this.compterPoint();
+        this.partisans=new ArrayList<Partisan>();
     }
 
 
