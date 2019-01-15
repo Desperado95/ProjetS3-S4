@@ -9,6 +9,7 @@ public class ZoneAbbaye extends Zone {
 		this.type = Parcelle.abbaye;
 		this.termine=false;
 		this.point=this.compterPoint();
+		this.partisans=new ArrayList<Partisan>();
 	}
 	
 	

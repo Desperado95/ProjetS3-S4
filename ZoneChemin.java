@@ -6,6 +6,7 @@ public class ZoneChemin extends Zone {
         this.type = Parcelle.chemin;
         this.termine = false;
         this.point = this.compterPoint();
+        this.partisans=new ArrayList<Partisan>();
     }
 
 

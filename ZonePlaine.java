@@ -7,15 +7,17 @@ public class ZonePlaine extends Zone {
         this.type = Parcelle.plaine;
         this.termine = false;
         this.point = this.compterPoint();
+        this.partisans=new ArrayList<Partisan>();
     }
 
 
     @Override
     public int compterPoint() {
         int c = 0;
-        /*for (;;) {
-
-        }*/
-        return c;
+        for(Carte )
+        {
+        	;
+        }
+    	return c;
     }
 }
