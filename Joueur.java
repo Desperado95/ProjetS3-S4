@@ -27,7 +27,7 @@ public class Joueur {
     /*Le methode de mettre un partisant sur la carte ce qui est dans le main*/
     public void mettreLesPions() {
         if (!partisans.isEmpty()) {
-
+        	
         }
     }
 
