@@ -13,7 +13,7 @@ public class Joueur {
         this.couleur = couleur;
         this.carte = new Carte();
         partisans = new ArrayList<>(partisans);
-        for (int i = 0; i < 5; i++) {
+        for (int i = 0; i < 8; i++) {
             partisans.add(new Partisan());
         }
     }

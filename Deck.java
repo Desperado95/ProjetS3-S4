@@ -17,125 +17,124 @@ public class Deck {
 	
 	private RemplirDeck()
 	{
-		Carte c1 = new Carte(Parcelle.chemin, Parcelle.plaine, Parcelle.chemin, Parcelle.plaine, Parcelle.chemin, Parcelle.plaine, Parcelle.plaine, Parcelle.plaine, Parcelle.plaine);
+		
         int i = 9;
         for (int y = 0; y < i; y++) {
-            AddCarte(c1);
+            AddCarte(new Carte(Parcelle.chemin, Parcelle.plaine, Parcelle.chemin, Parcelle.plaine, Parcelle.chemin, Parcelle.plaine, Parcelle.plaine, Parcelle.plaine, Parcelle.plaine););
         }
-        Carte c2 = new Carte(Parcelle.chemin, Parcelle.ville, Parcelle.chemin, Parcelle.chemin, Parcelle.plaine, Parcelle.plaine, Parcelle.plaine, Parcelle.plaine, Parcelle.plaine);
+        
         i = 3;
         for (int y = 0; y < i; y++) {
-            AddCarte(c2);
+            AddCarte(new Carte(Parcelle.chemin, Parcelle.ville, Parcelle.chemin, Parcelle.chemin, Parcelle.plaine, Parcelle.plaine, Parcelle.plaine, Parcelle.plaine, Parcelle.plaine););
         }
-        Carte c3 = new Carte(ville, ville, chemin, chemin, ville, Parcelle.plaine, Parcelle.plaine, Parcelle.plaine, Parcelle.plaine);
+    
         i = 2;
         for (int y = 0; y < i; y++) {
-            AddCarte(c3);
+            AddCarte( new Carte(ville, ville, chemin, chemin, ville, Parcelle.plaine, Parcelle.plaine, Parcelle.plaine, Parcelle.plaine););
         }
-        Carte c4 = new Carte(ville, ville, chemin, ville, ville);
+        
         i = 1;
         for (int y = 0; y < i; y++) {
-            AddCarte(c4);
+            AddCarte(new Carte(ville, ville, chemin, ville, ville););
         }
-        Carte c5 = new Carte(ville, ville, plaine, ville, ville);
+        
         i = 1;
         for (int y = 0; y < i; y++) {
-            AddCarte(c5);
+            AddCarte(new Carte(ville, ville, plaine, ville, ville););
         }
-        Carte c6 = new Carte(ville, ville, chemin, chemin, ville);
+       
         i = 3;
         for (int y = 0; y < i; y++) {
-            AddCarte(c6);
+            AddCarte(new Carte(ville, ville, chemin, chemin, ville););
         }
-        Carte c7 = new Carte(chemin, ville, chemin, chemin, chemin);
+       
         i = 3;
         for (int y = 0; y < i; y++) {
-            AddCarte(c7);
+            AddCarte( new Carte(chemin, ville, chemin, chemin, chemin););
         }
-        Carte c8 = new Carte(chemin, chemin, chemin, plaine, plaine);
+        
         i = 8;
         for (int y = 0; y < i; y++) {
-            AddCarte(c8);
+            AddCarte(new Carte(chemin, chemin, chemin, plaine, plaine););
         }
-        Carte c9 = new Carte(ville, plaine, chemin, chemin, chemin);
+        
         i = 4;
         for (int y = 0; y < i; y++) {
-            AddCarte(c9);
+            AddCarte(new Carte(ville, plaine, chemin, chemin, chemin););
         }
-        Carte c10 = new Carte(plaine, ville, plaine, plaine, plaine);
+         
         i = 5;
         for (int y = 0; y < i; y++) {
-            AddCarte(c10);
+            AddCarte(new Carte(plaine, ville, plaine, plaine, plaine););
         }
-        Carte c11 = new Carte(plaine, ville, plaine, plaine, ville);
+        
         i = 2;
         for (int y = 0; y < i; y++) {
-            AddCarte(c11);
+            AddCarte(new Carte(plaine, ville, plaine, plaine, ville););
         }
-        Carte c12 = new Carte(ville, ville, plaine, ville, ville);
         i = 3;
         for (int y = 0; y < i; y++) {
-            AddCarte(c12);
+            AddCarte(new Carte(ville, ville, plaine, ville, ville););
         }
-        Carte c13 = new Carte(abbaye, plaine, plaine, plaine, plaine);
+       
         i = 4;
         for (int y = 0; y < i; y++) {
-            AddCarte(c13);
+            AddCarte(new Carte(abbaye, plaine, plaine, plaine, plaine););
         }
-        Carte c14 = new Carte(ville, plaine, chemin, plaine, plaine);
+       
         i = 2;
         for (int y = 0; y < i; y++) {
-            AddCarte(c14);
+            AddCarte(new Carte(ville, plaine, chemin, plaine, plaine););
         }
-        Carte c15 = new Carte(ville, ville, plaine, plaine, ville);
+        
         i = 3;
         for (int y = 0; y < i; y++) {
-            AddCarte(c15);
+            AddCarte(new Carte(ville, ville, plaine, plaine, ville););
         }
-        Carte c16 = new Carte(ville, plaine, plaine, ville, ville);
+        
         i = 2;
         for (int y = 0; y < i; y++) {
-            AddCarte(c16);
+            AddCarte(new Carte(ville, plaine, plaine, ville, ville););
         }
-        Carte c17 = new Carte(chemin, ville, plaine, chemin, chemin);
+        
         i = 4;
         for (int y = 0; y < i; y++) {
-            AddCarte(c17);
+            AddCarte(new Carte(chemin, ville, plaine, chemin, chemin););
         }
-        Carte c18 = new Carte(chemin, ville, chemin, plaine, chemin);
+       
         i = 3;
         for (int y = 0; y < i; y++) {
-            AddCarte(c18);
+            AddCarte(new Carte(chemin, ville, chemin, plaine, chemin););
         }
-        Carte c19 = new Carte(ville, plaine, plaine, ville, ville);
+        
         i = 1;
         for (int y = 0; y < i; y++) {
-            AddCarte(c19);
+            AddCarte(new Carte(ville, plaine, plaine, ville, ville););
         }
-        Carte c20 = new Carte(ville, ville, chemin, chemin, chemin);
+      
         i = 2;
         for (int y = 0; y < i; y++) {
-            AddCarte(c20);
+            AddCarte(  new Carte(ville, ville, chemin, chemin, chemin););
         }
-        Carte c21 = new Carte(ville, ville, ville, ville, ville);
+        
         i = 1;
         for (int y = 0; y < i; y++) {
-            AddCarte(c21);
+            AddCarte(new Carte(ville, ville, ville, ville, ville););
         }
-        Carte c22 = new Carte(ville, chemin, chemin, chemin, chemin);
+        
         i = 1;
         for (int y = 0; y < i; y++) {
-            AddCarte(c22);
+            AddCarte(new Carte(ville, chemin, chemin, chemin, chemin););
         }
-        Carte c23 = new Carte(ville, ville, plaine, plaine, ville);
+        
         i = 2;
         for (int y = 0; y < i; y++) {
-            AddCarte(c23);
+            AddCarte(new Carte(ville, ville, plaine, plaine, ville););
         }
-        Carte c24 = new Carte(plaine, plaine, plaine, ville, ville);
+       
         i = 3;
         for (int y = 0; y < i; y++) {
-            AddCarte(c24);
+            AddCarte(new Carte(plaine, plaine, plaine, ville, ville););
         }
 	}
 	
