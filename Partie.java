@@ -1,4 +1,3 @@
-
 public class Partie {
 
 	public ArrayList<Joueur> joueurs;
@@ -34,6 +33,7 @@ public class Partie {
 	public void tourJoueur(Joueur j) {
 		Carte c= d.Draw();
 		j.c = c;
+		plat.Ajouter();
 		
 	}
 }
