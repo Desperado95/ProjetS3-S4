@@ -168,4 +168,16 @@ public class Deck {
     public boolean isEmpty() {
         return lsCarte.isEmpty();
     }
+
+
+    public void complirDeckMini() {
+        capacity = 32;
+        ArrayList<Carte> tmp = new ArrayList<Carte>();
+        melanger();
+        for (int i = 0; i < capacity; i++) {
+            tmp.add(lsCarte.get(i));
+        }
+        lsCarte = new ArrayList<Carte>(tmp);
+        contient = lsCarte.size();
+    }
 }
