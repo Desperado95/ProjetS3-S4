@@ -12,4 +12,5 @@ public class Partie {
 		plat = new Plateau(d.Draw());
 	}
 
+
 }
