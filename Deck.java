@@ -166,4 +166,7 @@ public class Deck {
 			c.Aff();
 		}
 	}
+	public boolean isEmpty() {
+		return lsCarte.isEmpty();
+		}
 }
