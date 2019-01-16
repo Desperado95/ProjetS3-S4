@@ -8,23 +8,27 @@ public class Deck {
 	private int contient;
 	private int capacity;
 	
-	public Deck() {
-		lsCarte = new ArrayList<Carte>();
-		capacity = 72;
-		contient = 0;
-		RemplirDeck();
-	}
 	
-	private RemplirDeck()
-	{
 		
+    public Deck() {
+        lsCarte = new ArrayList<Carte>();
+        capacity = 72;
+        contient = 0;
+        RemplirDeck();
+    }
+
+    private void RemplirDeck() {
+    
         int i = 9;
         for (int y = 0; y < i; y++) {
+
             AddCarte(new Carte(Parcelle.chemin, Parcelle.plaine, Parcelle.chemin, Parcelle.plaine, Parcelle.chemin, Parcelle.plaine, Parcelle.plaine, Parcelle.plaine, Parcelle.plaine););
+
         }
-        
+
         i = 3;
         for (int y = 0; y < i; y++) {
+
             AddCarte(new Carte(Parcelle.chemin, Parcelle.ville, Parcelle.chemin, Parcelle.chemin, Parcelle.plaine, Parcelle.plaine, Parcelle.plaine, Parcelle.plaine, Parcelle.plaine););
         }
     
@@ -42,22 +46,18 @@ public class Deck {
         for (int y = 0; y < i; y++) {
             AddCarte(new Carte(ville, ville, plaine, ville, ville););
         }
-       
         i = 3;
         for (int y = 0; y < i; y++) {
             AddCarte(new Carte(ville, ville, chemin, chemin, ville););
         }
-       
         i = 3;
         for (int y = 0; y < i; y++) {
             AddCarte( new Carte(chemin, ville, chemin, chemin, chemin););
         }
-        
         i = 8;
         for (int y = 0; y < i; y++) {
             AddCarte(new Carte(chemin, chemin, chemin, plaine, plaine););
         }
-        
         i = 4;
         for (int y = 0; y < i; y++) {
             AddCarte(new Carte(ville, plaine, chemin, chemin, chemin););
@@ -76,7 +76,6 @@ public class Deck {
         for (int y = 0; y < i; y++) {
             AddCarte(new Carte(ville, ville, plaine, ville, ville););
         }
-       
         i = 4;
         for (int y = 0; y < i; y++) {
             AddCarte(new Carte(abbaye, plaine, plaine, plaine, plaine););
@@ -126,12 +125,10 @@ public class Deck {
         for (int y = 0; y < i; y++) {
             AddCarte(new Carte(ville, chemin, chemin, chemin, chemin););
         }
-        
         i = 2;
         for (int y = 0; y < i; y++) {
             AddCarte(new Carte(ville, ville, plaine, plaine, ville););
         }
-       
         i = 3;
         for (int y = 0; y < i; y++) {
             AddCarte(new Carte(plaine, plaine, plaine, ville, ville););
