@@ -3,6 +3,8 @@
 import javafx.scene.control.Label;
 
 import javafx.application.Application;
+import javafx.collections.FXCollections;
+import javafx.collections.ObservableList;
 import javafx.event.ActionEvent;
 import javafx.event.EventHandler;
 import javafx.scene.Group;
@@ -15,7 +17,12 @@ import javafx.scene.image.Image;
 import javafx.scene.paint.Color;
 import javafx.stage.Stage;
 import javafx.scene.image.ImageView;
+import javafx.scene.layout.HBox;
+import javafx.scene.layout.VBox;
+
 import java.io.InputStream;
+import java.util.ArrayList;
+
 import javafx.scene.paint.Color;
 
 public class JFx extends Application {
@@ -113,16 +120,89 @@ public class JFx extends Application {
             public void handle(ActionEvent event) {
             	primaryStage.close();
             	Stage sta = new Stage();
-            	sta.setTitle("Param�tres");
+            	sta.setTitle("Paramètres");
                 Group group= new Group();
                 Scene sce= new Scene(group, 500, 300, Color.LIGHTBLUE);
+                
                 Button valider = new Button();
-                btn.setLayoutX(400);
-                btn.setLayoutY(100);
-                btn.setText("Valider");
-                group.getChildren().add(btn);
+                valider.setLayoutX(400);
+                valider.setLayoutY(100);
+                valider.setText("Valider");
+                
+                Label nb = new Label();
+                nb.setLayoutX(50);
+                nb.setLayoutY(50);
+                nb.setText("Nombre de joueur :");
+                
+                ObservableList<String> options = FXCollections.observableArrayList(
+                	        "1",
+                	        "2",
+                	        "3",
+                	        "4"
+                	    );
+                final ComboBox cb = new ComboBox(options);
+                cb.setLayoutX(200);
+                cb.setLayoutY(50);
+                
+                Label type = new Label();
+                type.setLayoutX(50);
+                type.setLayoutY(150);
+                type.setText("Type de partie :");
+                
+                ObservableList<String> opt = FXCollections.observableArrayList(
+                	        "Courte (36 cartes)",
+                	        "Normal (72 cartes)"
+                	    );
+                final ComboBox cob = new ComboBox(opt);
+                cob.setLayoutX(200);
+                cob.setLayoutY(150);
+                
+                group.getChildren().add(type);
+                group.getChildren().add(cob);
+                group.getChildren().add(nb);
+                group.getChildren().add(valider);
+                group.getChildren().add(cb);
                 sta.setScene(sce);
                 sta.show();
+                
+                valider.setOnAction(new EventHandler<ActionEvent>() {
+
+                    public void handle(ActionEvent event) {
+                    	sta.close();
+                    	Stage joueur = new Stage();
+                    	joueur.setTitle("Paramètre Joueur(s)");
+                        Group groupJ= new Group();
+                        Scene sceneJ= new Scene(groupJ, 500, 300, Color.LIGHTBLUE);
+                        VBox vbvb = new VBox();
+                        ArrayList<TextField> array = new ArrayList<TextField>();
+                        for(int i = 0;i<Integer.parseInt(cb.getPromptText()); i++ )
+                        {
+                        	HBox hbhb = new HBox();
+                        	Label l = new Label();
+                        	l.setText("Joueur " + (1+i) + " : ");
+                        	TextField t = new TextField();
+                        	t.setText("Nom");
+                        	array.add(t);
+                        	hbhb.getChildren().add(l);
+                        	hbhb.getChildren().add(t);
+                        	vbvb.getChildren().add(hbhb);
+                        }
+                        Button butt = new Button();
+                        butt.setText("Calcul");
+                       
+                        vbvb.getChildren().add(butt);
+                        groupJ.getChildren().add(vbvb);
+                       
+                        
+                        groupJ.getChildren().add(type);
+                        groupJ.getChildren().add(cob);
+                        groupJ.getChildren().add(nb);
+                        groupJ.getChildren().add(valider);
+                        groupJ.getChildren().add(cb);
+                        joueur.setScene(sceneJ);
+                        joueur.show();
+                    }
+                });
             }
         });
     }
