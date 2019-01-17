@@ -9,6 +9,11 @@ public class Plateau {
 	}
 	
 	Boolean ajouter(Carte c,int x, int y) {
+		boolean nord=false;
+		boolean sud=false;
+		boolean ouest=false;
+		boolean est=false;
+		
 		if(plat[x][y]!=null)
 		{
 			System.out.println("1");
@@ -24,6 +29,9 @@ public class Plateau {
 					return false;
 				}
 			}
+		else {
+			
+		}
 			 if(plat[x-1][y]!=null) 
 			{
 				if(plat[x-1][y].est==c.ouest)
@@ -54,6 +62,25 @@ public class Plateau {
 			
 		}
 		
+	}
+	
+	
+	Zone creerZone(Carte c,Parcelle p){//abbaye,plaine,chemin,ville;
+		if(p==abbaye)
+		{
+			Zone z = new ZoneAbbaye();
+		}
+		else if(p==plaine){
+			Zone z = new ZonePlaine();
+		}
+		else if(p==chemin){
+			Zone z = new ZoneChemin();
+		}
+		else {
+			Zone z = new ZoneVille();
+		}
+		z.ajouterCarte(c);
+		return z;
 	}
 	
 	void afficher(){
