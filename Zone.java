@@ -23,5 +23,15 @@ public abstract class Zone {
 		partisans.add(par);
 	}
 	
+	public void fusioner(Zone z) {
+		for(Carte c : z.cartes) {
+			ajouterCarte(c);
+			if(zNord==z) {zNord=this;}
+			if(zSud==z) {zsud=this;}
+			if(zEst==z) {zEst=this;}
+			if(zOuest==z) {zOuest=this;}
+		}
+	}
+	
 	public abstract int compterPoint();
 }

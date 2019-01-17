@@ -3,12 +3,19 @@ public class Carte {
     Parcelle centre;
     Parcelle nord;
     Parcelle sud;
-    Parcelle est;
+    Parcelle est;    
     Parcelle ouest;
+    
+    Zone zNord;
+    Zone zSud;
+    Zone zEst;
+    Zone zOuest;    
+    
     Parcelle nordest;
     Parcelle nordouest;
     Parcelle sudest;
     Parcelle sudouest;
+    
     Etat etat;
     Etat eNord;
     Etat eSud;
