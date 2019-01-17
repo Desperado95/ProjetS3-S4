@@ -31,6 +31,10 @@ public abstract class Zone {
 			if(zEst==z) {zEst=this;}
 			if(zOuest==z) {zOuest=this;}
 		}
+		for(Partisan p : z.partisans)
+		{
+			partisans.add(p);
+		}
 	}
 	
 	public abstract int compterPoint();
