@@ -16,6 +16,11 @@ public class Carte {
     Parcelle sudest;
     Parcelle sudouest;
     
+    Zone znordest;
+    Zone znordouest;
+    Zone zsudest;
+    Zone zsudouest;
+    
     Etat etat;
     Etat eNord;
     Etat eSud;
