@@ -6,6 +6,7 @@ public class Carte {
     Parcelle est;    
     Parcelle ouest;
     
+    Zonr zCentre;
     Zone zNord;
     Zone zSud;
     Zone zEst;
@@ -16,10 +17,10 @@ public class Carte {
     Parcelle sudest;
     Parcelle sudouest;
     
-    Zone znordest;
-    Zone znordouest;
-    Zone zsudest;
-    Zone zsudouest;
+    Zone zNordest;
+    Zone zNordouest;
+    Zone zSudest;
+    Zone zSudouest;
     
     Etat etat;
     Etat eNord;

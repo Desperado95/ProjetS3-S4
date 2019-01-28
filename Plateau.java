@@ -23,33 +23,37 @@ public class Plateau {
 		else
 		{	if(plat[x+1][y]!=null)
 			{
+			est = true;
 				if(plat[x+1][y].ouest==c.est)
 				{
 					System.out.println("2");
 					return false;
 				}
 			}
-		else {
+			else {
 			
-		}
-			 if(plat[x-1][y]!=null) 
+			}
+			if(plat[x-1][y]!=null) 
 			{
+				ouest = true;
 				if(plat[x-1][y].est==c.ouest)
 				{
 					System.out.println("3");
 					return false;
 				}
 			}
-			 if(plat[x][y+1]!=null) 
+			if(plat[x][y+1]!=null) 
 			{
+				nord = true;
 				if(plat[x][y+1].nord==c.sud)
 				{
 					System.out.println("4");
 					return false;
 				}
 			}
-			 if(plat[x][y-1]!=null) 
+			if(plat[x][y-1]!=null) 
 			{
+				sud = true;
 				if(plat[x][y-1].sud==c.nord)
 				{
 					System.out.println("5");
@@ -58,6 +62,15 @@ public class Plateau {
 			}
 				System.out.println("6");
 				plat[x][y]=c;
+				if(nord == false) {c.zNord = creerZone(c,c.nord);}
+				else {}
+				if(sud == false) {c.zSud = creerZone(c,c.sud);}
+				else {}
+				if(est == false){c.zEst = creerZone(c,c.est);}
+				else {}
+				if(ouest == false) {c.zOuest = creerZone(c,c.ouest);}
+				else {}
+				if(centre == Parcelle.abbaye) {}
 				return true;
 			
 		}
