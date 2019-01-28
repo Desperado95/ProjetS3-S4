@@ -25,7 +25,7 @@ public class Plateau {
 			{
 				if(plat[x+1][y].ouest==c.est)
 				{
-					System.out.println("2 valentin was here");
+					System.out.println("2");
 					return false;
 				}
 			}
@@ -80,6 +80,7 @@ public class Plateau {
 			Zone z = new ZoneVille();
 		}
 		z.ajouterCarte(c);
+		
 		return z;
 	}
 	
