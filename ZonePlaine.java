@@ -13,8 +13,11 @@ public class ZonePlaine extends Zone {
 
     @Override
     public int compterPoint() {
-        int c = 0;
-
-        return c;
+    	  int cpt = 0;
+          for (Carte c : cartes) {
+              cpt += 1;
+          }
+          return cpt;
+      }
     }
 }

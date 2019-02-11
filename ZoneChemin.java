@@ -12,6 +12,11 @@ public class ZoneChemin extends Zone {
 
     @Override
     public int compterPoint() {
-        return 0;
+    	  int cpt = 0;
+          for (Carte c : cartes) {
+              cpt += 1;
+          }
+          return cpt;
+      }
     }
 }

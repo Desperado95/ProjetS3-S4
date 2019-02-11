@@ -9,16 +9,16 @@ public class Plateau {
 	}
 	
 	Boolean ajouter(Carte c,int x, int y) {
-		boolean nord=false;
-		boolean sud=false;
-		boolean ouest=false;
-		boolean est=false;
+		boolean nord = false;
+		boolean sud = false;
+		boolean ouest = false;
+		boolean est = false;
+		boolean abbaye = false;
 		
 		if(plat[x][y]!=null)
 		{
 			System.out.println("1");
 			return false;
-			
 		}
 		else
 		{	if(plat[x+1][y]!=null)
@@ -62,6 +62,15 @@ public class Plateau {
 			}
 				System.out.println("6");
 				plat[x][y]=c;
+				
+				if(c.centre == Parcelle.abbaye) {
+					zCentre = creerZone(c,c.centre);
+					abbaye=true;
+				}
+				if(c.centre == Parcelle.abbaye) {
+					zCentre = creerZone(c,c.centre);
+					abbaye = true;
+				}
 				if(nord == false) {c.zNord = creerZone(c,c.nord);}
 				else {}
 				if(sud == false) {c.zSud = creerZone(c,c.sud);}
@@ -70,7 +79,7 @@ public class Plateau {
 				else {}
 				if(ouest == false) {c.zOuest = creerZone(c,c.ouest);}
 				else {}
-				if(centre == Parcelle.abbaye) {}
+				
 				return true;
 			
 		}
