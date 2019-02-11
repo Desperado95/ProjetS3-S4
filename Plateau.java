@@ -24,7 +24,7 @@ public class Plateau {
 		{	if(plat[x+1][y]!=null)
 			{
 			est = true;
-				if(plat[x+1][y].ouest==c.est)
+				if(plat[x+1][y].ouest!=c.est)
 				{
 					System.out.println("2");
 					return false;
@@ -36,7 +36,7 @@ public class Plateau {
 			if(plat[x-1][y]!=null) 
 			{
 				ouest = true;
-				if(plat[x-1][y].est==c.ouest)
+				if(plat[x-1][y].est!=c.ouest)
 				{
 					System.out.println("3");
 					return false;
@@ -45,7 +45,7 @@ public class Plateau {
 			if(plat[x][y+1]!=null) 
 			{
 				nord = true;
-				if(plat[x][y+1].nord==c.sud)
+				if(plat[x][y+1].nord!=c.sud)
 				{
 					System.out.println("4");
 					return false;
@@ -54,7 +54,7 @@ public class Plateau {
 			if(plat[x][y-1]!=null) 
 			{
 				sud = true;
-				if(plat[x][y-1].sud==c.nord)
+				if(plat[x][y-1].sud!=c.nord)
 				{
 					System.out.println("5");
 					return false;
@@ -69,7 +69,7 @@ public class Plateau {
 				}
 				
 				if(nord == false) {c.zNord = creerZone(c,c.nord);}
-				else {}
+				else {plat[x][y+1].c.zNord}
 				if(sud == false) {c.zSud = creerZone(c,c.sud);}
 				else {}
 				if(est == false){c.zEst = creerZone(c,c.est);}
