@@ -67,10 +67,7 @@ public class Plateau {
 					zCentre = creerZone(c,c.centre);
 					abbaye=true;
 				}
-				if(c.centre == Parcelle.abbaye) {
-					zCentre = creerZone(c,c.centre);
-					abbaye = true;
-				}
+				
 				if(nord == false) {c.zNord = creerZone(c,c.nord);}
 				else {}
 				if(sud == false) {c.zSud = creerZone(c,c.sud);}
