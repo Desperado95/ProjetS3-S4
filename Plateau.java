@@ -69,13 +69,13 @@ public class Plateau {
 				}
 				
 				if(nord == false) {c.zNord = creerZone(c,c.nord);}
-				else {plat[x][y+1].c.zNord}
+				else {plat[x][y-1].c.zNord}
 				if(sud == false) {c.zSud = creerZone(c,c.sud);}
-				else {}
+				else {plat[x][y+1].c.zSud}
 				if(est == false){c.zEst = creerZone(c,c.est);}
-				else {}
+				else {plat[x+1][y].c.zEst}
 				if(ouest == false) {c.zOuest = creerZone(c,c.ouest);}
-				else {}
+				else {plat[x-1][y].c.zOuest}
 				
 				return true;
 			

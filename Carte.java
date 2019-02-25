@@ -102,6 +102,13 @@ public class Carte {
         this.ouest = this.sud;
         this.sud = this.est;
         this.est = tempo;
+        
+        tempo = nordouest;
+        this.nordest = nordouest;
+        this.nordouest = sudest;
+        this.sudest = sudouest;
+        this.sudouest = tempo;
+        
     }
 
     public void tournerAntiHoraire() {
@@ -110,6 +117,13 @@ public class Carte {
         this.est = this.sud;
         this.sud = this.ouest;
         this.ouest = tempo;
+        
+        tempo = nordouest;
+        this.sudest = nordouest;
+        this.nordouest = sudouest;
+        this.sudouest = nordest;
+        this.nordest =tempo;
+        
     }
 
     public void Aff() {
