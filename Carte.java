@@ -5,24 +5,24 @@ public class Carte {
     Parcelle sud;
     Parcelle est;    
     Parcelle ouest;
-    
-    Zonr zCentre;
-    Zone zNord;
-    Zone zSud;
-    Zone zEst;
-    Zone zOuest;    
-    
     Parcelle nordest;
     Parcelle nordouest;
     Parcelle sudest;
     Parcelle sudouest;
     
+    
+    Zone zCentre;
+    Zone zNord;
+    Zone zSud;
+    Zone zEst;
+    Zone zOuest;    
     Zone zNordest;
     Zone zNordouest;
     Zone zSudest;
     Zone zSudouest;
     
     Etat etat;
+    
     Etat eNord;
     Etat eSud;
     Etat eOuest;
@@ -103,11 +103,14 @@ public class Carte {
         this.sud = this.est;
         this.est = tempo;
         
-        tempo = nordouest;
-        this.nordest = nordouest;
-        this.nordouest = sudest;
-        this.sudest = sudouest;
-        this.sudouest = tempo;
+        tempo = nordest;
+        this.nordest = this.nordouest;
+        this.nordouest = this.sudouest;
+        this.sudouest = this.sudest;
+        this.sudest = tempo;
+
+        
+     
         
     }
 
@@ -118,11 +121,11 @@ public class Carte {
         this.sud = this.ouest;
         this.ouest = tempo;
         
-        tempo = nordouest;
-        this.sudest = nordouest;
-        this.nordouest = sudouest;
-        this.sudouest = nordest;
-        this.nordest =tempo;
+        tempo = nordest;
+        this.nordest = this.sudest;
+        this.sudest = this.sudouest;
+        this.sudouest = this.nordouest;
+        this.nordouest = tempo;
         
     }
 
@@ -133,6 +136,3 @@ public class Carte {
     }
  
 }
-
-
-
