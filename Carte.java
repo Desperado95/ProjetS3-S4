@@ -1,3 +1,6 @@
+import java.io.InputStream;
+
+import javafx.scene.image.Image;
 
 public class Carte {
     Parcelle centre;
@@ -9,6 +12,8 @@ public class Carte {
     Parcelle nordouest;
     Parcelle sudest;
     Parcelle sudouest;
+    
+    int deg = 0;
     
     
     Zone zCentre;
@@ -32,6 +37,8 @@ public class Carte {
     Etat eSudouest;
     Etat eSudest;
     Etat eCentre;
+    
+    Image image;
 
     public Carte() {
         this.est = null;
@@ -50,9 +57,12 @@ public class Carte {
         eSudouest = null;
         eSudest = null;
         eCentre = null;
+        Class<?> clazz = MyClass.class;
+    	InputStream input = clazz.getResourceAsStream("/org/o7planning/javafx/icon/fond.jpg");
+         image = new Image(input, 100, 100, false, true);
     }
 
-    public Carte(Parcelle centre, Parcelle nord, Parcelle sud, Parcelle est, Parcelle ouest, Parcelle nordoust, Parcelle nordest, Parcelle sudouest, Parcelle sudost) {
+    public Carte(Parcelle centre, Parcelle nord, Parcelle sud, Parcelle est, Parcelle ouest, Parcelle nordoust, Parcelle nordest, Parcelle sudouest, Parcelle sudost,String src) {
         this.centre = centre;
         this.nord = nord;
         this.sud = sud;
@@ -73,6 +83,10 @@ public class Carte {
         eSudouest = Etat.non_place;
         eSudest = Etat.non_place;
         eCentre = Etat.non_place;
+        
+        Class<?> clazz = MyClass.class;
+    	InputStream input = clazz.getResourceAsStream(src);
+        image = new Image(input, 100, 100, false, true);
 
     }
 
@@ -93,6 +107,8 @@ public class Carte {
         eSudouest = c.eSudouest;
         eSudest = c.eSudest;
         eCentre = c.eCentre;
+        
+        this.image = c.image;
 
     }
 
@@ -108,6 +124,8 @@ public class Carte {
         this.nordouest = this.sudouest;
         this.sudouest = this.sudest;
         this.sudest = tempo;
+        
+        deg+=90;
 
         
      
@@ -127,6 +145,8 @@ public class Carte {
         this.sudouest = this.nordouest;
         this.nordouest = tempo;
         
+        deg-=90;
+        
     }
 
     public void Aff() {
@@ -136,3 +156,6 @@ public class Carte {
     }
  
 }
+
+
+
