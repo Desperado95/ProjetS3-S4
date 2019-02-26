@@ -17,125 +17,125 @@ public class Deck {
     }
 
     private void RemplirDeck() {
-        Carte c1 = new Carte(Parcelle.chemin, Parcelle.plaine, Parcelle.chemin, Parcelle.plaine, Parcelle.chemin, Parcelle.plaine, Parcelle.plaine, Parcelle.plaine, Parcelle.plaine);
-        int i = 9;
+        Carte c1 = new Carte(Parcelle.chemin, Parcelle.plaine, Parcelle.chemin, Parcelle.plaine, Parcelle.chemin, Parcelle.plaine, Parcelle.plaine, Parcelle.plaine, Parcelle.plaine,"/org/o7planning/javafx/icon/9a.jpg");
+        int i = 9;																			//9a
         for (int y = 0; y < i; y++) {
-            AddCarte(c1);
+            AddCarte(new Carte(c1));
         }
-        Carte c2 = new Carte(Parcelle.chemin, Parcelle.ville, Parcelle.chemin, Parcelle.chemin, Parcelle.plaine, Parcelle.ville, Parcelle.ville, Parcelle.plaine, Parcelle.plaine);
-        i = 3;
+        Carte c2 = new Carte(Parcelle.chemin, Parcelle.ville, Parcelle.chemin, Parcelle.chemin, Parcelle.plaine, Parcelle.ville, Parcelle.ville, Parcelle.plaine, Parcelle.plaine,"/org/o7planning/javafx/icon/3a.jpg");
+        i = 3;																				//3a
         for (int y = 0; y < i; y++) {
-            AddCarte(c2);
+            AddCarte(new Carte(c2));
         }
-        Carte c3 = new Carte(Parcelle.ville, Parcelle.ville, Parcelle.chemin, Parcelle.chemin, Parcelle.ville, Parcelle.ville, Parcelle.ville, Parcelle.ville, Parcelle.chemin);
-        i = 2;
+        Carte c3 = new Carte(Parcelle.ville, Parcelle.ville, Parcelle.chemin, Parcelle.chemin, Parcelle.ville, Parcelle.ville, Parcelle.ville, Parcelle.ville, Parcelle.chemin,"/org/o7planning/javafx/icon/2a.jpg");
+        i = 2;																				//2a
         for (int y = 0; y < i; y++) {
-            AddCarte(c3);
+            AddCarte(new Carte(c3));
         }
-        Carte c4 = new Carte(Parcelle.ville, Parcelle.ville, Parcelle.chemin, Parcelle.ville, Parcelle.ville, Parcelle.ville, Parcelle.ville, Parcelle.ville, Parcelle.ville);
-        i = 1;
+        Carte c4 = new Carte(Parcelle.ville, Parcelle.ville, Parcelle.chemin, Parcelle.ville, Parcelle.ville, Parcelle.ville, Parcelle.ville, Parcelle.ville, Parcelle.ville,"/org/o7planning/javafx/icon/1a.jpg");
+        i = 1;																				//1a
         for (int y = 0; y < i; y++) {
-            AddCarte(c4);
+            AddCarte(new Carte(c4));
         }
-        Carte c5 = new Carte(Parcelle.ville, Parcelle.ville, Parcelle.plaine, Parcelle.ville, Parcelle.ville, Parcelle.ville, Parcelle.ville, Parcelle.ville, Parcelle.ville);
-        i = 1;
+        Carte c5 = new Carte(Parcelle.ville, Parcelle.ville, Parcelle.plaine, Parcelle.ville, Parcelle.ville, Parcelle.ville, Parcelle.ville, Parcelle.ville, Parcelle.ville,"/org/o7planning/javafx/icon/1b.jpg");
+        i = 1;																				//1b
         for (int y = 0; y < i; y++) {
-            AddCarte(c5);
+            AddCarte(new Carte(c5));
         }
-        Carte c6 = new Carte(Parcelle.ville, Parcelle.ville, Parcelle.chemin, Parcelle.chemin, Parcelle.ville, Parcelle.ville, Parcelle.ville, Parcelle.ville, Parcelle.plaine);
-        i = 3;
+        Carte c6 = new Carte(Parcelle.ville, Parcelle.ville, Parcelle.chemin, Parcelle.chemin, Parcelle.ville, Parcelle.ville, Parcelle.ville, Parcelle.ville, Parcelle.plaine,"/org/o7planning/javafx/icon/3b.jpg");
+        i = 3;																				//3b
         for (int y = 0; y < i; y++) {
-            AddCarte(c6);
+            AddCarte(new Carte(c6));
         }
-        Carte c7 = new Carte(Parcelle.chemin, Parcelle.ville, Parcelle.chemin, Parcelle.chemin, Parcelle.chemin, Parcelle.ville, Parcelle.ville, Parcelle.plaine, Parcelle.plaine);
-        i = 3;
+        Carte c7 = new Carte(Parcelle.chemin, Parcelle.ville, Parcelle.chemin, Parcelle.chemin, Parcelle.chemin, Parcelle.ville, Parcelle.ville, Parcelle.plaine, Parcelle.plaine,"/org/o7planning/javafx/icon/3c.jpg");
+        i = 3;																				//3c
         for (int y = 0; y < i; y++) {
-            AddCarte(c7);
+            AddCarte(new Carte(c7));
         }
-        Carte c8 = new Carte(Parcelle.chemin, Parcelle.chemin, Parcelle.chemin, Parcelle.plaine, Parcelle.plaine, Parcelle.plaine, Parcelle.plaine, Parcelle.plaine, Parcelle.plaine);
-        i = 8;
+        Carte c8 = new Carte(Parcelle.chemin, Parcelle.chemin, Parcelle.chemin, Parcelle.plaine, Parcelle.plaine, Parcelle.plaine, Parcelle.plaine, Parcelle.plaine, Parcelle.plaine,"/org/o7planning/javafx/icon/8a.jpg");
+        i = 8;																				//8a
         for (int y = 0; y < i; y++) {
-            AddCarte(c8);
+            AddCarte(new Carte(c8));
         }
-        Carte c9 = new Carte(Parcelle.ville, Parcelle.plaine, Parcelle.chemin, Parcelle.chemin, Parcelle.chemin, Parcelle.plaine, Parcelle.plaine, Parcelle.plaine, Parcelle.plaine);
-        i = 4;
+        Carte c9 = new Carte(Parcelle.ville, Parcelle.plaine, Parcelle.chemin, Parcelle.chemin, Parcelle.chemin, Parcelle.plaine, Parcelle.plaine, Parcelle.plaine, Parcelle.plaine,"/org/o7planning/javafx/icon/4a.jpg");
+        i = 4;																				//4a
         for (int y = 0; y < i; y++) {
-            AddCarte(c9);
+            AddCarte(new Carte(c9));
         }
-        Carte c10 = new Carte(Parcelle.plaine, Parcelle.ville, Parcelle.plaine, Parcelle.plaine, Parcelle.plaine, Parcelle.plaine, Parcelle.plaine, Parcelle.plaine, Parcelle.plaine);
-        i = 5;
+        Carte c10 = new Carte(Parcelle.plaine, Parcelle.ville, Parcelle.plaine, Parcelle.plaine, Parcelle.plaine, Parcelle.plaine, Parcelle.plaine, Parcelle.plaine, Parcelle.plaine,"/org/o7planning/javafx/icon/5a.jpg");
+        i = 5;																				//5a
         for (int y = 0; y < i; y++) {
-            AddCarte(c10);
+            AddCarte(new Carte(c10));
         }
-        Carte c11 = new Carte(Parcelle.plaine, Parcelle.ville, Parcelle.plaine, Parcelle.plaine, Parcelle.ville, Parcelle.plaine, Parcelle.ville, Parcelle.plaine, Parcelle.plaine);
-        i = 2;
+        Carte c11 = new Carte(Parcelle.plaine, Parcelle.ville, Parcelle.plaine, Parcelle.plaine, Parcelle.ville, Parcelle.plaine, Parcelle.ville, Parcelle.plaine, Parcelle.plaine,"/org/o7planning/javafx/icon/2b.jpg");
+        i = 2;																				//2b
         for (int y = 0; y < i; y++) {
-            AddCarte(c11);
+            AddCarte(new Carte(c11));
         }
-        Carte c12 = new Carte(Parcelle.ville, Parcelle.ville, Parcelle.plaine, Parcelle.ville, Parcelle.ville, Parcelle.ville, Parcelle.ville, Parcelle.ville, Parcelle.ville);
-        i = 3;
+        Carte c12 = new Carte(Parcelle.ville, Parcelle.ville, Parcelle.plaine, Parcelle.ville, Parcelle.ville, Parcelle.ville, Parcelle.ville, Parcelle.ville, Parcelle.ville,"/org/o7planning/javafx/icon/3d.jpg");
+        i = 3;																				//3d
         for (int y = 0; y < i; y++) {
-            AddCarte(c12);
+            AddCarte(new Carte(c12));
         }
-        Carte c13 = new Carte(Parcelle.abbaye, Parcelle.plaine, Parcelle.plaine, Parcelle.plaine, Parcelle.plaine, Parcelle.plaine, Parcelle.plaine, Parcelle.plaine, Parcelle.plaine);
-        i = 4;
+        Carte c13 = new Carte(Parcelle.abbaye, Parcelle.plaine, Parcelle.plaine, Parcelle.plaine, Parcelle.plaine, Parcelle.plaine, Parcelle.plaine, Parcelle.plaine, Parcelle.plaine,"/org/o7planning/javafx/icon/4b.jpg");
+        i = 4;																				//4b
         for (int y = 0; y < i; y++) {
-            AddCarte(c13);
+            AddCarte(new Carte(c13));
         }
-        Carte c14 = new Carte(Parcelle.ville, Parcelle.plaine, Parcelle.chemin, Parcelle.plaine, Parcelle.plaine, Parcelle.plaine, Parcelle.plaine, Parcelle.plaine, Parcelle.plaine);
-        i = 2;
+        Carte c14 = new Carte(Parcelle.ville, Parcelle.plaine, Parcelle.chemin, Parcelle.plaine, Parcelle.plaine, Parcelle.plaine, Parcelle.plaine, Parcelle.plaine, Parcelle.plaine,"/org/o7planning/javafx/icon/2c.jpg");
+        i = 2;																				//2c
         for (int y = 0; y < i; y++) {
-            AddCarte(c14);
+            AddCarte(new Carte(c14));
         }
-        Carte c15 = new Carte(Parcelle.ville, Parcelle.ville, Parcelle.plaine, Parcelle.plaine, Parcelle.ville, Parcelle.ville, Parcelle.plaine, Parcelle.plaine, Parcelle.plaine);
-        i = 3;
+        Carte c15 = new Carte(Parcelle.ville, Parcelle.ville, Parcelle.plaine, Parcelle.plaine, Parcelle.ville, Parcelle.ville, Parcelle.plaine, Parcelle.plaine, Parcelle.plaine,"/org/o7planning/javafx/icon/3e.jpg");
+        i = 3;																				//3e
         for (int y = 0; y < i; y++) {
-            AddCarte(c15);
+            AddCarte(new Carte(c15));
         }
-        Carte c16 = new Carte(Parcelle.ville, Parcelle.plaine, Parcelle.plaine, Parcelle.ville, Parcelle.ville, Parcelle.ville, Parcelle.ville, Parcelle.ville, Parcelle.ville);
-        i = 2;
+        Carte c16 = new Carte(Parcelle.ville, Parcelle.plaine, Parcelle.plaine, Parcelle.ville, Parcelle.ville, Parcelle.ville, Parcelle.ville, Parcelle.ville, Parcelle.ville,"/org/o7planning/javafx/icon/2d.jpg");
+        i = 2;																				//2d
         for (int y = 0; y < i; y++) {
-            AddCarte(c16);
+            AddCarte(new Carte(c16));
         }
-        Carte c17 = new Carte(Parcelle.chemin, Parcelle.ville, Parcelle.plaine, Parcelle.chemin, Parcelle.chemin, Parcelle.plaine, Parcelle.plaine, Parcelle.plaine, Parcelle.plaine);
-        i = 4;
+        Carte c17 = new Carte(Parcelle.chemin, Parcelle.ville, Parcelle.plaine, Parcelle.chemin, Parcelle.chemin, Parcelle.plaine, Parcelle.plaine, Parcelle.plaine, Parcelle.plaine,"/org/o7planning/javafx/icon/4c.jpg");
+        i = 4;																				//4c
         for (int y = 0; y < i; y++) {
-            AddCarte(c17);
+            AddCarte(new Carte(c17));
         }
-        Carte c18 = new Carte(Parcelle.chemin, Parcelle.ville, Parcelle.chemin, Parcelle.plaine, Parcelle.chemin, Parcelle.plaine, Parcelle.plaine, Parcelle.plaine, Parcelle.plaine);
-        i = 3;
+        Carte c18 = new Carte(Parcelle.chemin, Parcelle.ville, Parcelle.chemin, Parcelle.plaine, Parcelle.chemin, Parcelle.plaine, Parcelle.plaine, Parcelle.plaine, Parcelle.plaine,"/org/o7planning/javafx/icon/2f.jpg");
+        i = 3;																				//2f
         for (int y = 0; y < i; y++) {
-            AddCarte(c18);
+            AddCarte(new Carte(c18));
         }
-        Carte c19 = new Carte(Parcelle.ville, Parcelle.plaine, Parcelle.plaine, Parcelle.ville, Parcelle.ville, Parcelle.ville, Parcelle.ville, Parcelle.ville, Parcelle.ville);
-        i = 1;
+        Carte c19 = new Carte(Parcelle.ville, Parcelle.plaine, Parcelle.plaine, Parcelle.ville, Parcelle.ville, Parcelle.ville, Parcelle.ville, Parcelle.ville, Parcelle.ville,"/org/o7planning/javafx/icon/1c.jpg");
+        i = 1;																				//1c
         for (int y = 0; y < i; y++) {
-            AddCarte(c19);
+            AddCarte(new Carte(c19));
         }
-        Carte c20 = new Carte(Parcelle.ville, Parcelle.ville, Parcelle.chemin, Parcelle.chemin, Parcelle.chemin, Parcelle.ville, Parcelle.ville, Parcelle.ville, Parcelle.ville);
-        i = 2;
+        Carte c20 = new Carte(Parcelle.ville, Parcelle.ville, Parcelle.chemin, Parcelle.chemin, Parcelle.chemin, Parcelle.ville, Parcelle.ville, Parcelle.ville, Parcelle.ville,"/org/o7planning/javafx/icon/2e.jpg");
+        i = 2;																				//2e
         for (int y = 0; y < i; y++) {
-            AddCarte(c20);
+            AddCarte(new Carte(c20));
         }
-        Carte c21 = new Carte(Parcelle.ville, Parcelle.ville, Parcelle.ville, Parcelle.ville, Parcelle.ville, Parcelle.ville, Parcelle.ville, Parcelle.ville, Parcelle.ville);
-        i = 1;
+        Carte c21 = new Carte(Parcelle.ville, Parcelle.ville, Parcelle.ville, Parcelle.ville, Parcelle.ville, Parcelle.ville, Parcelle.ville, Parcelle.ville, Parcelle.ville,"/org/o7planning/javafx/icon/1d.jpg");
+        i = 1;																				//1d
         for (int y = 0; y < i; y++) {
-            AddCarte(c21);
+            AddCarte(new Carte(c21));
         }
-        Carte c22 = new Carte(Parcelle.ville, Parcelle.chemin, Parcelle.chemin, Parcelle.chemin, Parcelle.chemin, Parcelle.plaine, Parcelle.plaine, Parcelle.plaine, Parcelle.plaine);
-        i = 1;
+        Carte c22 = new Carte(Parcelle.ville, Parcelle.chemin, Parcelle.chemin, Parcelle.chemin, Parcelle.chemin, Parcelle.plaine, Parcelle.plaine, Parcelle.plaine, Parcelle.plaine,"/org/o7planning/javafx/icon/1e.jpg");
+        i = 1;																				//1e
         for (int y = 0; y < i; y++) {
-            AddCarte(c22);
+            AddCarte(new Carte(c22));
         }
-        Carte c23 = new Carte(Parcelle.ville, Parcelle.ville, Parcelle.plaine, Parcelle.plaine, Parcelle.ville, Parcelle.ville, Parcelle.plaine, Parcelle.plaine, Parcelle.plaine);
-        i = 2;
+        Carte c23 = new Carte(Parcelle.ville, Parcelle.ville, Parcelle.plaine, Parcelle.plaine, Parcelle.ville, Parcelle.ville, Parcelle.plaine, Parcelle.plaine, Parcelle.plaine,"/org/o7planning/javafx/icon/2f.jpg");
+        i = 2;																				//2f
         for (int y = 0; y < i; y++) {
-            AddCarte(c23);
+            AddCarte(new Carte(c23));
         }
-        Carte c24 = new Carte(Parcelle.plaine, Parcelle.plaine, Parcelle.plaine, Parcelle.ville, Parcelle.ville, Parcelle.plaine, Parcelle.plaine, Parcelle.plaine, Parcelle.plaine);
-        i = 3;
+        Carte c24 = new Carte(Parcelle.plaine, Parcelle.plaine, Parcelle.plaine, Parcelle.ville, Parcelle.ville, Parcelle.plaine, Parcelle.plaine, Parcelle.plaine, Parcelle.plaine,"/org/o7planning/javafx/icon/3g.jpg");
+        i = 3;																				//3g
         for (int y = 0; y < i; y++) {
-            AddCarte(c24);
+            AddCarte(new Carte(c24));
         }
     }
 
