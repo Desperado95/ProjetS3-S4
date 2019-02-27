@@ -1,7 +1,7 @@
-public class Partisan<T extends Parcelle> {
+public class Partisan {
 	
-	private Etat etat;
-	private Zone z;
+	Etat etat;
+	Zone z;
 	
 	public Partisan()
 	{
@@ -12,4 +12,6 @@ public class Partisan<T extends Parcelle> {
 	{
 		z=zone;
 	}
+	
+	
 }
