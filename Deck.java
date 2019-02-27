@@ -16,7 +16,7 @@ public class Deck {
         RemplirDeck();
     }
 
-    private void RemplirDeck() {
+    public void RemplirDeck() {
         Carte c1 = new Carte(Parcelle.chemin, Parcelle.plaine, Parcelle.chemin, Parcelle.plaine, Parcelle.chemin, Parcelle.plaine, Parcelle.plaine, Parcelle.plaine, Parcelle.plaine,"/org/o7planning/javafx/icon/9a.jpg");
         int i = 9;																			//9a
         for (int y = 0; y < i; y++) {
