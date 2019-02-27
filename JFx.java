@@ -17,14 +17,19 @@ import javafx.scene.image.Image;
 import javafx.scene.paint.Color;
 import javafx.stage.Stage;
 import javafx.scene.image.ImageView;
+import javafx.scene.layout.ColumnConstraints;
+import javafx.scene.layout.GridPane;
 import javafx.scene.layout.HBox;
+import javafx.scene.layout.Priority;
+import javafx.scene.layout.Region;
+import javafx.scene.layout.RowConstraints;
 import javafx.scene.layout.VBox;
 
 import java.io.InputStream;
 import java.util.ArrayList;
 
 import javafx.scene.paint.Color;
-
+/*
 public class JFx extends Application {
 
     public static void main(String[] args) {
@@ -135,7 +140,6 @@ public class JFx extends Application {
                 nb.setText("Nombre de joueur :");
                 
                 ObservableList<String> options = FXCollections.observableArrayList(
-                	        "1",
                 	        "2",
                 	        "3",
                 	        "4"
@@ -168,43 +172,185 @@ public class JFx extends Application {
                 valider.setOnAction(new EventHandler<ActionEvent>() {
 
                     public void handle(ActionEvent event) {
-                    	sta.close();
-                    	Stage joueur = new Stage();
-                    	joueur.setTitle("Paramètre Joueur(s)");
-                        Group groupJ= new Group();
-                        Scene sceneJ= new Scene(groupJ, 500, 300, Color.LIGHTBLUE);
-                        VBox vbvb = new VBox();
-                        ArrayList<TextField> array = new ArrayList<TextField>();
-                        for(int i = 0;i<Integer.parseInt(cb.getPromptText()); i++ )
-                        {
-                        	HBox hbhb = new HBox();
-                        	Label l = new Label();
-                        	l.setText("Joueur " + (1+i) + " : ");
-                        	TextField t = new TextField();
-                        	t.setText("Nom");
-                        	array.add(t);
-                        	hbhb.getChildren().add(l);
-                        	hbhb.getChildren().add(t);
-                        	vbvb.getChildren().add(hbhb);
-                        }
-                        Button butt = new Button();
-                        butt.setText("Calcul");
-                       
-                        vbvb.getChildren().add(butt);
-                        groupJ.getChildren().add(vbvb);
-                       
-                        
-                        groupJ.getChildren().add(type);
-                        groupJ.getChildren().add(cob);
-                        groupJ.getChildren().add(nb);
-                        groupJ.getChildren().add(valider);
-                        groupJ.getChildren().add(cb);
-                        joueur.setScene(sceneJ);
-                        joueur.show();
+                    	if(cob.getValue()!=null && cb.getValue()!=null)
+                    	{
+	                    	sta.close();
+	                    	Stage joueur = new Stage();
+	                    	joueur.setTitle("Paramètre Joueur(s)");
+	                        Group groupJ= new Group();
+	                        Scene sceneJ= new Scene(groupJ, 500, 300, Color.LIGHTBLUE);
+	                        VBox vbvb = new VBox();
+	                        //ArrayList<TextField> array = new ArrayList<TextField>();
+	                        for(int i = 0;i<Integer.parseInt((String)cb.getValue()); i++ )
+	                        {
+	                        	HBox hbhb = new HBox();
+	                        	Label l = new Label();
+	                        	l.setText("Joueur " + (1+i) + " : ");
+	                        	TextField t = new TextField();
+	                        	t.setText("Nom");
+	                        	ObservableList<String> o = FXCollections.observableArrayList(
+	                        	        "Rouge",
+	                        	        "Bleu",
+	                        	        "Vert",
+	                        	        "Jaune"
+	                        	    );
+	                        	final ComboBox col = new ComboBox(o);
+	                   
+	                        	//array.add(t);
+	                        	hbhb.getChildren().add(l);
+	                        	hbhb.getChildren().add(t);
+	                        	hbhb.getChildren().add(col);
+	                        	vbvb.getChildren().add(hbhb);
+	                        }
+	                        Button butt = new Button();
+	                        butt.setText("Calcul");
+	                       
+	                        vbvb.getChildren().add(butt);
+	                        groupJ.getChildren().add(vbvb);
+	                       
+	                        
+	                        joueur.setScene(sceneJ);
+	                        joueur.show();
+	                    }
                     }
                 });
             }
         });
     }
-}
-    
+}*/
+
+
+import javafx.scene.control.Label;
+
+import javafx.application.Application;
+import javafx.collections.FXCollections;
+import javafx.collections.ObservableList;
+import javafx.event.ActionEvent;
+import javafx.event.EventHandler;
+import javafx.scene.Group;
+import javafx.scene.Node;
+import javafx.scene.Scene;
+import javafx.scene.control.Button;
+import javafx.scene.control.ComboBox;
+import javafx.scene.control.TextField;
+import javafx.scene.image.Image;
+import javafx.scene.paint.Color;
+import javafx.stage.Stage;
+import javafx.scene.image.ImageView;
+import javafx.scene.layout.HBox;
+import javafx.scene.layout.VBox;
+
+
+public class JFx extends Application { 
+	public Partie partie = new Partie();
+  
+    @Override 
+    public void start(Stage primaryStage) { 
+        final GridPane grid = new GridPane(); 
+
+        ArrayList<ImageView> iw = new ArrayList<ImageView>();
+	    ArrayList<ImageViewBis> vid = new ArrayList<ImageViewBis>();
+	    ArrayList<Carte> carvid = new ArrayList<Carte>();
+	       
+    	int x= -1;
+    	int j=-1;
+    	for(int i = 0; i<72;i++)
+    	{
+    		for(int y=0; y<72;y++)
+    		{
+    			if(partie.plat.plat[i][y]!=null)
+    			{
+    				x+=1;
+			    	iw.add(new ImageView());
+			        iw.get(x).setImage(partie.plat.plat[i][y].image);
+			        grid.add(iw.get(x), i, y); 
+			        System.out.println(x);
+			        if(partie.plat.plat[i+1][y]==null) {j+=1;vid.add(new ImageViewBis(new ImageView(),i+1,y));carvid.add(new Carte((i+1),y));vid.get(j).iw.setImage(carvid.get(j).image);grid.add(vid.get(j).iw, i+1, y);}
+			        if(partie.plat.plat[i-1][y]==null) {j+=1;vid.add(new ImageViewBis(new ImageView(),i-1,y));carvid.add(new Carte((i-1),y));vid.get(j).iw.setImage(carvid.get(j).image);grid.add(vid.get(j).iw, i-1, y);}
+			        if(partie.plat.plat[i][y+1]==null) {j+=1;vid.add(new ImageViewBis(new ImageView(),i,y+1));carvid.add(new Carte(i,(y+1)));vid.get(j).iw.setImage(carvid.get(j).image);grid.add(vid.get(j).iw, i, y+1);}
+			        if(partie.plat.plat[i][y-1]==null) {j+=1;vid.add(new ImageViewBis(new ImageView(),i,y-1));carvid.add(new Carte(i,(y-1)));vid.get(j).iw.setImage(carvid.get(j).image);grid.add(vid.get(j).iw, i, y-1);}
+
+    			}
+    			
+    		}
+	    }
+
+
+
+    	for(ImageViewBis img:vid)
+    	{
+    		img.iw.addEventHandler(ActionEvent.ACTION, new EventHandler<ActionEvent>() {
+	
+	            public void handle(ActionEvent event) {
+	            	partie.plat.ajouter(partie.joue.carte, img.x, img.y);
+	            }
+	        });
+    	}
+        grid.setGridLinesVisible(false);
+        
+        // 
+        grid.getColumnConstraints().setAll( 
+                new ColumnConstraints(75, Region.USE_COMPUTED_SIZE, Region.USE_COMPUTED_SIZE),  
+                new ColumnConstraints(75, Region.USE_COMPUTED_SIZE, Region.USE_COMPUTED_SIZE)); 
+        grid.getColumnConstraints().get(0).setHgrow(Priority.ALWAYS); 
+        grid.getColumnConstraints().get(1).setHgrow(Priority.ALWAYS); 
+        // 
+        grid.getRowConstraints().setAll( 
+                new RowConstraints(25, Region.USE_COMPUTED_SIZE, Region.USE_COMPUTED_SIZE),  
+                new RowConstraints(25, Region.USE_COMPUTED_SIZE, Region.USE_COMPUTED_SIZE),  
+                new RowConstraints(25, Region.USE_COMPUTED_SIZE, Region.USE_COMPUTED_SIZE)); 
+        grid.getRowConstraints().get(0).setVgrow(Priority.NEVER); 
+        grid.getRowConstraints().get(1).setVgrow(Priority.NEVER); 
+        grid.getRowConstraints().get(2).setVgrow(Priority.ALWAYS);
+        
+        
+    	Group root= new Group();
+        HBox hb = new HBox();
+
+        hb.setTranslateX(10);
+        hb.setTranslateY(500);
+        
+        
+        Carte c = partie.joue.carte;
+        VBox vb = new VBox();
+        ImageView carte = new ImageView();
+        carte.setImage(c.image);
+        carte.setTranslateX(30);
+        carte.setTranslateY(480);
+        Button buttt = new Button();
+        buttt.setText("Rotate right");
+                buttt.setOnAction(new EventHandler<ActionEvent>() {
+
+            public void handle(ActionEvent event) {
+            	 c.tournerHoraire();
+            	 carte.setRotate(c.deg);    
+            }
+        });
+        
+        Button butttt = new Button();
+        butttt.setText("Rotate left");
+        butttt.setOnAction(new EventHandler<ActionEvent>() {
+
+            public void handle(ActionEvent event) {
+            	c.tournerAntiHoraire();
+            	 carte.setRotate(c.deg);    
+            }
+        });
+
+        
+        
+        hb.getChildren().setAll(buttt,butttt);
+        vb.getChildren().setAll(carte,hb);
+        
+        // 
+        root.getChildren().setAll(vb,grid); 
+        Scene scene = new Scene(root, 1000, 650, Color.LIGHTBLUE); 
+        primaryStage.setTitle("Carcassonne"); 
+        primaryStage.setScene(scene); 
+        primaryStage.show(); 
+    } 
+  
+    public static void main(String[] args) { 
+        launch(args); 
+    } 
+}    
