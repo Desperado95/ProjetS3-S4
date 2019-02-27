@@ -8,7 +8,7 @@ public class Plateau {
 		plat[35][35]=c;
 	}
 	
-	Boolean ajouter(Carte c,int x, int y) {
+	boolean ajouter(Carte c,int x, int y) {
 		boolean nord = false;
 		boolean sud = false;
 		boolean ouest = false;
@@ -64,18 +64,18 @@ public class Plateau {
 				plat[x][y]=c;
 				
 				if(c.centre == Parcelle.abbaye) {
-					zCentre = creerZone(c,c.centre);
+					c.zCentre = creerZone(c,c.centre);
 					abbaye=true;
 				}
 				
 				if(nord == false) {c.zNord = creerZone(c,c.nord);}
-				else {plat[x][y-1].c.zNord}
+				else {c.zNord=plat[x][y+1].zSud;}
 				if(sud == false) {c.zSud = creerZone(c,c.sud);}
-				else {plat[x][y+1].c.zSud}
+				else {c.zSud=plat[x][y-1].zNord;}
 				if(est == false){c.zEst = creerZone(c,c.est);}
-				else {plat[x+1][y].c.zEst}
+				else {c.zEst=plat[x+1][y].zOuest;}
 				if(ouest == false) {c.zOuest = creerZone(c,c.ouest);}
-				else {plat[x-1][y].c.zOuest}
+				else {c.zOuest=plat[x-1][y].zEst;}
 				
 				return true;
 			
@@ -85,18 +85,19 @@ public class Plateau {
 	
 	
 	Zone creerZone(Carte c,Parcelle p){//abbaye,plaine,chemin,ville;
-		if(p==abbaye)
+		Zone z = null;
+		if(p==Parcelle.abbaye)
 		{
-			Zone z = new ZoneAbbaye();
+			z = new ZoneAbbaye();
 		}
-		else if(p==plaine){
-			Zone z = new ZonePlaine();
+		else if(p==Parcelle.plaine){
+			z = new ZonePlaine();
 		}
-		else if(p==chemin){
-			Zone z = new ZoneChemin();
+		else if(p==Parcelle.chemin){
+			z = new ZoneChemin();
 		}
 		else {
-			Zone z = new ZoneVille();
+			z = new ZoneVille();
 		}
 		z.ajouterCarte(c);
 		
