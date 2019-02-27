@@ -26,10 +26,10 @@ public abstract class Zone {
 	public void fusioner(Zone z) {
 		for(Carte c : z.cartes) {
 			ajouterCarte(c);
-			if(zNord==z) {zNord=this;}
-			if(zSud==z) {zsud=this;}
-			if(zEst==z) {zEst=this;}
-			if(zOuest==z) {zOuest=this;}
+			if(c.zNord==z) {c.zNord=this;}
+			if(c.zSud==z) {c.zSud=this;}
+			if(c.zEst==z) {c.zEst=this;}
+			if(c.zOuest==z) {c.zOuest=this;}
 		}
 		for(Partisan p : z.partisans)
 		{
